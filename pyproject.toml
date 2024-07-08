@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "depth-anything-v2"
+description = "Depth Anything V2"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dynamic = ["version"]
+
+dependencies = ["matplotlib", "opencv-python", "open3d", "torch", "torchvision"]
+
+[tool.setuptools_scm]
+write_to = "depth_anything_v2/_version.py"
+
+[tool.setuptools.packages.find]
+include = ["depth_anything_v2*"]
